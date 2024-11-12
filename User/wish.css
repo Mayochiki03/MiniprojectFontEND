@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+}
+
+.user-info {
+    font-size: 1.2em;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.back-link,
+.next-link {
+    background-color: #d4a14e;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 150px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.back-link:hover,
+.next-link:hover {
+    background-color: #eab156;
+    font-size: 15.5px;
+}
+
+.progress-bar {
+    display: flex;
+    gap: 50px;
+}
+
+.step {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc; /* Default color */
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+.step.completed {
+    background-color: #ff9100; /* Completion color */
+}
+
+.step.active {
+    background-color: #4caf50; /* Active color */
+    color: #fff;
+}
+
+/* Content Container */
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.wishcon {
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    top: -300px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Container and Headers */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    margin-right: 800px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+.container h4 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* Main Image */
+.main-image {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 90px;
+    margin-left: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0.5, 0.5, 0.5, 0.5);
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.base-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Option Grid */
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: -385px;
+    margin-left: 800px;
+    position: relative;
+
+}#wide-textbox {
+    grid-column: span 2; /* หรือจำนวนคอลัมน์ที่ต้องการให้ครอบคลุม */
+    width: 100%; /* ให้ยืดเต็มพื้นที่ของ grid-column */
+}
+
+
+.option {
+    text-align: center;
+}
+
+.option img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    border: 3px solid #e0e0e0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.option img:hover {
+    border-color: #d4a14e;
+    box-shadow: 0px 4px 10px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+.option p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Label Styling */
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+input[type="text"] {
+    min-width: 400px; /* ขนาดความกว้างขั้นต่ำ */
+    max-width: 800px; /* ขนาดความกว้างสูงสุด */
+}
+
+
+
+
+/* Adjustments for Specific Layout */
+h4 {
+    position: relative;
+    bottom: 400px;
+    left: 390px;
+}
+
+/* Name and Wish Styles */
+#name, #uwish {
+    font-family: 'Kanit', sans-serif;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    padding-left: 250px;
+    margin-top: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }.custom-input {
+    width: 100%; /* ขยายความยาวเต็มพื้นที่ */
+    max-width: 400px; /* หรือขนาดที่ต้องการ */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+#input-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* จัดให้มีสองคอลัมน์ */
+    gap: 15px; /* ระยะห่างระหว่างคอลัมน์ */
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Selection Page</title>
+    <link rel="stylesheet" href="wish.css">
+</head>
+
+<body>
+
+    <!-- Progress Bar Section -->
+    <section class="progress-container">
+        <a href="#" class="back-link" onclick="prevStep()">ย้อนกลับ</a>
+        <div class="progress-bar">
+            <div class="step" id="step-1">1</div>
+            <div class="step" id="step-2">2</div>
+            <div class="step" id="step-3">3</div>
+            <div class="step" id="step-4">4</div>
+            <div class="step" id="step-5">5</div>
+            <div class="step" id="step-6">6</div>
+            <div class="step" id="step-7">7</div>
+        </div>
+        <a href="#" class="next-link" onclick="nextStep()">ถัดไป</a>
+    </section>
+
+    <!-- Main Content Area with Step Containers -->
+    <section class="content">
+        <!-- Step 1 Container -->
+        <div id="container-1" class="container">
+            <h2>เลือกภาพพื้นหลังที่คุณชอบได้เลย</h2>
+            <div class="main-image">
+                <img src="BG/BG2.png" alt="Main Image" id="main-image1">
+            </div>
+            <h4>กรุณาเลือกพื้นหลังที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="BG/BG1.png" alt="รูปแบบที่ 1" onclick="selectImage('BG/BG1.png', 1)">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                    <div class="option">
+                        <img src="BG/BG2.png" alt="รูปแบบที่ 2" onclick="selectImage('BG/BG2.png', 1)">
+                        <p>รูปแบบที่ 2</p>
+                    </div>
+                    <div class="option">
+                        <img src="BG/BG3.png" alt="รูปแบบที่ 3" onclick="selectImage('BG/BG3.png', 1)">
+                        <p>รูปแบบที่ 3</p>
+                    </div>
+                    <div class="option">
+                        <img src="BG/BG4.png" alt="รูปแบบที่ 4" onclick="selectImage('BG/BG4.png', 1)">
+                        <p>รูปแบบที่ 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 Container -->
+        <div id="container-2" class="container" style="display: none;">
+            <h2>เลือกเจดีย์ทรายที่คุณชอบ</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image" id="main-image2">
+            </div>
+            <h4>กรุณาเลือกเจดีย์ที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="JD1/JD01.png" alt="รูปแบบที่ 1" onclick="selectImage('JD1/JD01.png', 2)">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 Container -->
+        <div id="container-3" class="container" style="display: none;">
+            <h2>เลือกดอกไม้ที่คุณชอบ</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image">
+            </div>
+            <h4>กรุณาเลือกใช้ดอกไม้ที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="JD1/flower/flower1.png" alt="รูปแบบที่ 1"
+                            onclick="selectImage('JD1/flower/flower1.png')">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                    <div class="option">
+                        <img src="JD1/flower/flower2.png" alt="รูปแบบที่ 2"
+                            onclick="selectImage('JD1/flower/flower2.png')">
+                        <p>รูปแบบที่ 2</p>
+                    </div>
+                    <div class="option">
+                        <img src="JD1/flower/flower3.png" alt="รูปแบบที่ 3"
+                            onclick="selectImage('JD1/flower/flower3.png')">
+                        <p>รูปแบบที่ 3</p>
+                    </div>
+                    <div class="option">
+                        <img src="JD1/flower/flower4.png" alt="รูปแบบที่ 4"
+                            onclick="selectImage('JD1/flower/flower4.png')">
+                        <p>รูปแบบที่ 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 Container -->
+        <div id="container-4" class="container" style="display: none;">
+            <h2>เลือกธงที่คุณชอบ</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image">
+            </div>
+            <h4>กรุณาเลือกใช้ธงที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="JD1/topflag/topflag1.png" alt="รูปแบบที่ 1"
+                            onclick="selectImage('JD1/topflag/topflag1.png')">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                    <div class="option">
+                        <img src="JD1/topflag/topflag2.png" alt="รูปแบบที่ 2"
+                            onclick="selectImage('JD1/topflag/topflag2.png')">
+                        <p>รูปแบบที่ 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5 Container -->
+        <div id="container-5" class="container" style="display: none;">
+            <h2>เลือกผ้าประดับที่คุณชอบ</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image">
+            </div>
+            <h4>กรุณาเลือกใช้ผ้าประดับที่ชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="JD1/flag/flag1.png" alt="รูปแบบที่ 1" onclick="selectImage('JD1/flag/flag1.png')">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                    <div class="option">
+                        <img src="JD1/flag/flag2.png" alt="รูปแบบที่ 2" onclick="selectImage('JD1/flag/flag2.png')">
+                        <p>รูปแบบที่ 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 6 Container -->
+        <div id="container-6" class="container" style="display: none;">
+            <h2>เลือกเทียนที่คุณชอบ</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image">
+            </div>
+            <h4>กรุณาเลือกใช้เทียนที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div class="option">
+                        <img src="JD1/candle/candle1.png" alt="รูปแบบที่ 1"
+                            onclick="selectImage('JD1/candle/candle1.png')">
+                        <p>รูปแบบที่ 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Step 7 Container -->
+        <div id="container-7" class="container" style="display: none;">
+            <h2>ใส่ชื่อและคำอธิษฐาน</h2>
+            <div class="main-image">
+                <img src="Nculture.jpg" alt="Main Image">
+            </div>
+            <h4>กรุณาเลือกใช้เทียนที่คุณชอบได้เลย!</h4>
+            <div class="options">
+                <div class="option-grid">
+                    <div id="input-section">
+                        
+                        <label for="name">ชื่อของคุณ</label>
+                        <input type="text" id="first-name" class="custom-input">
+                        <label for="wish">คำอธิษฐาน</label>
+                        <input type="text" id="last-name" class="custom-input">
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Link to JavaScript File -->
+    <script src="wish.js"></script>
+</body>
+
+</html>

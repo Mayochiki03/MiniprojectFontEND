@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>หน้าแสดงภาพ</title>
+  <link rel="stylesheet" href="main_admin.css">
+  <style>
+    /* CSS สำหรับการจัดการการแสดงผลของภาพ */
+    .image-placeholder {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="profile">
+      <img src="profile-placeholder.jpg" alt="Profile" class="profile-img">
+      <span class="username">m_Maple.i</span>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#" class="active">หน้าหลัก</a></li>
+        <li><a href="#">รายงาน</a></li>
+        <li><a href="#">การจัดการ</a></li>
+        <li><a href="#">ทีม</a></li>
+        <li><a href="#">การตั้งค่า</a></li>
+        <li class="logout"><a href="#">ออกจากระบบ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-content">
+    <header>
+      <h1>สวัสดี m_Maple.i</h1>
+      <p>ค้นหาสิ่งที่คุณต้องการได้อย่างง่ายดาย</p>
+      <input type="text" class="search-bar" placeholder="ค้นหา">
+    </header>
+    <div class="tabs">
+      <button class="tab active">ทั้งหมด</button>
+      <button class="tab">เจดีย์</button>
+      <button class="tab">ดอกไม้</button>
+      <button class="tab">ธง</button>
+      <button class="tab">ผ้าประดับ</button>
+      <button class="tab">เทียน</button>
+      <button class="tab">พื้นหลัง</button>
+      <button id="addBtn" class="custom-file-upload">เพิ่ม</button>
+      <button class="delete-btn" onclick="opendeleteImage()">ลบ</button>
+      <button class="edit-btn" onclick="openEditOverlay()">แก้ไข</button>
+
+    </div>
+
+    <div class="gallery">
+      <!-- เจดีย์ -->
+      <div class="image-card">
+        <img src="JD1\JD1.png" alt="เจดีย์ 1" class="image-placeholder">
+        <p>เจดีย์ 1</p>
+
+      </div>
+      <div class="image-card">
+        <img src="JD2\JD02.png" alt="เจดีย์ 2" class="image-placeholder">
+        <p>เจดีย์ 2</p>
+
+      </div>
+
+
+      <!-- ดอกไม้ -->
+      <div class="image-card">
+        <img src="JD1\flower\flower1.png" alt="ดอกไม้ 1" class="image-placeholder">
+        <p>ดอกไม้ 1</p>
+
+      </div>
+      <div class="image-card">
+        <img src="JD1\flower\flower2.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 2</p>
+
+      </div>
+      <div class="image-card">
+        <img src="JD1\flower\flower3.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 3</p>
+      </div>
+      <div class="image-card">
+        <img src="JD1\flower\flower4.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 4</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flower\flower1.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 5</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flower\flower2.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 6</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flower\flower3.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 7</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flower\flower4.png" alt="ดอกไม้ 2" class="image-placeholder">
+        <p>ดอกไม้ 8</p>
+      </div>
+
+      <!-- ธง -->
+      <div class="image-card">
+        <img src="JD1\topFlag\topflag1.png" alt="ธง 1" class="image-placeholder">
+        <p>ธง 1</p>
+      </div>
+      <div class="image-card">
+        <img src="JD1\topFlag\topflag2.png" alt="ธง 2" class="image-placeholder">
+        <p>ธง 2</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\Topflag\topflag1.png" alt="ธง 2" class="image-placeholder">
+        <p>ธง 3</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\Topflag\topflag2.png" alt="ธง 2" class="image-placeholder">
+        <p>ธง 4</p>
+      </div>
+
+      <!-- ผ้าประดับ -->
+      <div class="image-card">
+        <img src="JD1\Flag\flag1.png" alt="ผ้าประดับ 1" class="image-placeholder">
+        <p>ผ้าประดับ 1</p>
+      </div>
+      <div class="image-card">
+        <img src="JD1\Flag\flag2.png" alt="ผ้าประดับ 2" class="image-placeholder">
+        <p>ผ้าประดับ 2</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flag\flag1.png" alt="ผ้าประดับ 1" class="image-placeholder">
+        <p>ผ้าประดับ 3</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\flag\flag2.png" alt="ผ้าประดับ 1" class="image-placeholder">
+        <p>ผ้าประดับ 4</p>
+      </div>
+
+      <!-- เทียน -->
+      <div class="image-card">
+        <img src="JD1\candle\candle.png" alt="เทียน 1" class="image-placeholder">
+        <p>เทียน 1</p>
+      </div>
+      <div class="image-card">
+        <img src="JD2\candel\candle1.png" alt="เทียน 1" class="image-placeholder">
+        <p>เทียน 2</p>
+      </div>
+
+      <!-- พื้นหลัง -->
+      <div class="image-card">
+        <img src="BG\BG1.png" alt="พื้นหลัง 1" class="image-placeholder">
+        <p>พื้นหลัง 1</p>
+      </div>
+      <div class="image-card">
+        <img src="BG\BG2.png" alt="พื้นหลัง 2" class="image-placeholder">
+        <p>พื้นหลัง 2</p>
+      </div>
+      <div class="image-card">
+        <img src="BG\BG3.png" alt="พื้นหลัง 2" class="image-placeholder">
+        <p>พื้นหลัง 3</p>
+      </div>
+      <div class="image-card">
+        <img src="BG\BG4.png" alt="พื้นหลัง 2" class="image-placeholder">
+        <p>พื้นหลัง 4</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="uploadOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay()">&times;</span>
+      <h2>เพิ่มข้อมูลเข้าสู่ระบบ</h2>
+      <form id="uploadForm">
+        <div class="form-group">
+          <label for="category">หมวดหมู่:</label>
+          <select id="category" required>
+            <option value="">เลือกหมวดหมู่</option>
+            <option value="JD">เจดีย์</option>
+            <option value="LowFlag">ธงล่าง</option>
+            <option value="TopFlag">ธงบน</option>
+            <option value="Candle">เทียน</option>
+            <option value="Background">ภาพพื้นหลัง</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">ชื่อ:</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="decorations_type">ประเภทของตกแต่ง:</label>
+          <select id="decorations_type" required>
+            <option value="">เลือกประเภทของตกแต่ง</option>
+            <option value="JD1">JD1</option>
+            <option value="JD2">JD2</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <!-- Custom label styled as a button -->
+          <label for="image" class="custom-file-upload1">เลือกไฟล์ที่ต้องการเพิ่ม</label>
+          <!-- Hidden native input -->
+          <input type="file" id="image" accept="image/png, image/jpeg, image/webp, image/jpg" style="display: none;"
+            required>
+          <!-- Span to display the selected file name -->
+          <span id="fileName">ชื่อไฟล์ที่เลือก: ไม่มี</span>
+        </div>
+
+
+        <button type="submit">ยืนยันการเพิ่มข้อมูล</button>
+        <p class="error" id="errorMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay ที่ใช้แสดงเมื่อกดแก้ไข -->
+  <div id="editOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeEditOverlay()">&times;</span>
+      <h2>แก้ไขข้อมูลภาพ</h2>
+      <!-- เนื้อหาเพิ่มเติมสำหรับการแก้ไขภาพ -->
+    </div>
+  </div>
+  <!-- Overlay ที่ใช้แสดงเมื่อกดแก้ไข -->
+  <div id="deleteOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeEditOverlay()">&times;</span>
+      <h2>เลือกภาพที่จะลบ</h2>
+      <div id="imageGallery"></div>
+      <!-- เนื้อหาเพิ่มเติมสำหรับการแก้ไขภาพ -->
+    </div>
+  </div>
+  <!-- Overlay ลบ -->
+  <div id="deleteOverlay" class="overlay" style="display: none;">
+    <div class="overlayContent">
+      <span class="close-btn" onclick="closeOverlay()">&times;</span>
+      <p>คุณแน่ใจหรือไม่ว่าต้องการลบภาพนี้?</p>
+      <div id="imageGallery"></div>
+      <button id="confirmDelete" onclick="confirmDelete()">ยืนยัน</button>
+      <button id="cancelDelete" onclick="closeDeleteOverlay()">ยกเลิก</button>
+
+    </div>
+  </div>
+
+  <script src="main_admin.js"></script>
+</body>
+
+</html>
